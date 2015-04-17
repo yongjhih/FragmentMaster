@@ -116,13 +116,8 @@ public abstract class FragmentMaster {
     protected abstract void onFragmentStarted(IMasterFragment fragment);
 
     private IMasterFragment newFragment(String className) {
-        try {
-            return (IMasterFragment) Fragment.instantiate(getActivity(),
-                    className, new Bundle());
-        } catch (Exception e) {
-            throw new RuntimeException("No fragment found : { className="
-                    + className + " }");
-        }
+        return (IMasterFragment) Fragment.instantiate(getActivity(),
+                className, new Bundle());
     }
 
     public final void finishFragment(IMasterFragment fragment, int resultCode,
