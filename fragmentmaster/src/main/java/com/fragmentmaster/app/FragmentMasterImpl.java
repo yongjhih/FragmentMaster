@@ -99,6 +99,10 @@ public class FragmentMasterImpl extends FragmentMaster {
         return FRAGMENT_CONTAINER_ID;
     }
 
+    public PagerAdapter getAdapter() {
+        return mAdapter;
+    }
+
     @Override
     protected void onFragmentStarted(IMasterFragment fragment) {
         mAdapter.notifyDataSetChanged();
