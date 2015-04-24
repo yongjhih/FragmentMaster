@@ -17,9 +17,7 @@
 package com.fragmentmaster.app;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.os.Parcelable;
-import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.support.v4.view.ViewPagerCompat;
@@ -112,11 +110,6 @@ class FragmentMasterPager extends ViewPagerCompat {
             if (mWrappedOnPageChangeListener != null) {
                 mWrappedOnPageChangeListener.onPageSelected(position);
             }
-            for (int i = 0; i < mFragmentMasterImpl.getAdapter().getCount(); i++) {
-                ((Fragment) mFragmentMasterImpl.getFragments().get(i)).setHasOptionsMenu(i == position);
-            }
-            Activity a = mFragmentMasterImpl.getActivity();
-            a.invalidateOptionsMenu(); //a.supportInvalidateOptionsMenu();
         }
     };
 
