@@ -16,6 +16,7 @@
 
 package com.fragmentmaster.app;
 
+import android.graphics.Color;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.PagerAdapter;
@@ -90,6 +91,7 @@ public class FragmentMasterImpl extends FragmentMaster {
         mViewPager.setOffscreenPageLimit(Integer.MAX_VALUE);
         mViewPager.setAdapter(mAdapter);
         mViewPager.setOnPageChangeListener(mOnPageChangeListener);
+        mViewPager.setBackgroundColor(Color.TRANSPARENT);
 
         container.addView(mViewPager);
     }
