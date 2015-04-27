@@ -131,8 +131,8 @@ class MasterFragmentDelegate {
         // Note: The view is an instance of NoSaveStateFrameLayout,
         // which is inserted between the Fragment's view and its container by FragmentManager.
         TypedValue outValue = new TypedValue();
-        getFragmentContext().getTheme().resolveAttribute(android.R.attr.windowBackground, outValue, true);
-        view.setBackgroundResource(outValue.resourceId);
+        //getFragmentContext().getTheme().resolveAttribute(android.R.attr.windowBackground, outValue, true);
+        //view.setBackgroundResource(outValue.resourceId);
         // Set the "clickable" of the fragment's root view to true to avoid
         // touch events to be passed to the views behind the fragment.
         view.setClickable(true);
